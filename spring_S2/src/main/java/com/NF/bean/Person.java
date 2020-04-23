@@ -16,6 +16,15 @@ public class Person {
     private Map<String,Object> maps;
     private Properties properties;
 
+    public void init() {
+        //编写N行逻辑代码完成初始化功能
+        System.out.println("person对象初始化完城");
+    }
+
+    public void destory() {
+        System.out.println("person对象销毁");
+    }
+
 
     //无参构造
     public Person(){
@@ -40,6 +49,15 @@ public class Person {
         this.name = name;
         this.gender = gender;
         System.out.println("gendre...");
+    }
+
+//    public Person(int id, String name, Address address) {
+//        this.id = id;
+//        this.name = name;
+//        this.address = address;
+//    }
+    public Person(Address address) {
+        this.address = address;
     }
 
     public int getId() {
@@ -137,4 +155,6 @@ public class Person {
                 ", properties=" + properties +
                 '}';
     }
+
+
 }
